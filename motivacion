@@ -163,5 +163,5 @@ const MOTIVACION = [
 ];
 
 (function () {
-  return SUERTE[Math.floor(Math.random() * SUERTE.length - 1)];
+  return MOTIVACION[Math.floor(Math.random() * MOTIVACION.length - 1)];
 }());
