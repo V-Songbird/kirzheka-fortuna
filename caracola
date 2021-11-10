@@ -73,7 +73,7 @@ respError = [
     if (Math.floor(Math.random() * 100) < 7) {
         return respGlobal[Math.floor(Math.random() * respGlobal.length - 1)];
     }
-    if (inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|podrias|podrías|dirias|podrias decirme si|como me ira|.*?re|.*?ré)/gi)) {
+    if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|podrias|podrías|dirias|podrias decirme si|como me ira|.*?re|.*?ré)/gi)) {
         return respSiNo[Math.floor(Math.random() * respSiNo.length - 1)];
     }
     if (inputUsuario.match(/^(cuantos años|con cuantos años)/gi)) {
