@@ -73,28 +73,28 @@ respError = [
     if (Math.floor(Math.random() * 100) < 7) {
         return respGlobal[Math.floor(Math.random() * respGlobal.length - 1)];
     }
-    if (inputUsuario.match(/^(me va|crees|piensas|podrias|podrías|dirias|podrias decirme si|como me ira|.*?re|.*?ré)/)) {
+    if (inputUsuario.match(/^(me va|crees|piensas|podrias|podrías|dirias|podrias decirme si|como me ira|.*?re|.*?ré)/gi)) {
         return respSiNo[Math.floor(Math.random() * respSiNo.length - 1)];
     }
-    if (inputUsuario.match(/^(cuantos años|con cuantos años)/)) {
+    if (inputUsuario.match(/^(cuantos años|con cuantos años)/gi)) {
         return `${Math.floor(Math.random() * 50)} años`;
     }
-    if (inputUsuario.match(/^(cuanto tiempo|en cuanto tiempo|cuantos dias|con cuantos dias|en que tiempo)/)) {
+    if (inputUsuario.match(/^(cuanto tiempo|en cuanto tiempo|cuantos dias|con cuantos dias|en que tiempo)/gi)) {
         return `${Math.floor(Math.random() * 100)} dias`;
     }
-    if (inputUsuario.match(/^(en cuanto esta)/)) {
+    if (inputUsuario.match(/^(en cuanto esta)/gi)) {
         return `en ${Math.floor(Math.random() * 100000)}`;
     }
-    if (inputUsuario.match(/^(dame un numero|dime un numero|que numero)/)) {
+    if (inputUsuario.match(/^(dame un numero|dime un numero|que numero)/gi)) {
         return `${Math.floor(Math.random() * 100)}`;
     }
-    if (inputUsuario.match(/^(cuanto|cuantos|que cantidad|cuantas|cuanta|en que cantidad|que tanto)/)) {
+    if (inputUsuario.match(/^(cuanto|cuantos|que cantidad|cuantas|cuanta|en que cantidad|que tanto)/gi)) {
         return respCuanto[Math.floor(Math.random() * respCuanto.length - 1)];
     }
-    if (inputUsuario.match(/^(como me .*?a|como .*?re|como .*?a|como se encuentra|como se encontrar|como estas|como te va)/)) {
+    if (inputUsuario.match(/^(como me .*?a|como .*?re|como .*?a|como se encuentra|como se encontrar|como estas|como te va)/gi)) {
         return respComo[Math.floor(Math.random() * respComo.length - 1)];
     }
-    if (inputUsuario.match(/^(que haces|que comes|que cuentas)/)) {
+    if (inputUsuario.match(/^(que haces|que comes|que cuentas)/gi)) {
         return "Que te importa Kappa";
     }
     return respError[Math.floor(Math.random() * respError.length - 1)];
