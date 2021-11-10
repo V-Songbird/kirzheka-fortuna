@@ -1,102 +1,102 @@
 respSiNo = [
-    "Si",
-    "No",
-    "Probablemente",
-    "Quizá",
-    "Algún día",
-    "Sigue participando",
-    "No lo creo",
-    "¿De verdad crees tener la oportunidad?",
-    "¡Por supuesto que si!",
-    "En un par de años",
-    "Asi es, te lo has ganado",
-    "Humm... creo que si...",
-    "Eso espero, aun que deberás tener cuidado...",
-    "Tengo un buen presentimiento",
+    "Si kirzheHype2",
+    "No kirzheCry",
+    "Probablemente kirzheCerdito",
+    "Quizá kirzheEnojada",
+    "Algún día kirzheHappy",
+    "No lo creo kirzheCry",
+    "¿De verdad crees tener la oportunidad? kirzhePayaso",
+    "¡Por supuesto que si! kirzheHype2",
+    "En un par de años kirzheCerdito",
+    "Asi es, te lo has ganado kirzheHappy",
+    "Humm... creo que si... kirzheCerdito",
+    "Eso espero, aun que deberás tener cuidado... kirzheAyno",
+    "Tengo un buen presentimiento kirzheHappy",
 ];
 
 respCuanto = [
-    "Humm... diria que entre 5 y 10",
-    "Muy poc@s",
-    "Casi nada",
-    "Demasiad@s",
-    "Más de lo que esperabas",
-    "Menos de lo que esperabas",
-    "Una cantidad muy pequeña, casi inexistente",
-    "Una cantidad muy grande, no podría mostrartelo en números",
-    "Much@s",
-    "Nada",
-    "&#($! Error de computo, cantidad demasiado grande",
-    "L@s podrás contar con los dedos de 1 mano",
+    "Humm... diria que entre 5 y 10 kirzheCozy",
+    "Muy poc@s kirzheCr",
+    "Casi nada kirzheEnojada",
+    "Demasiad@s kirzheHappy",
+    "Más de lo que esperabas kirzheHappy",
+    "Menos de lo que esperabas kirzheEnojada",
+    "Una cantidad muy pequeña, casi inexistente kirzheCr",
+    "Una cantidad muy grande, no podría mostrartelo en números kirzheHappy",
+    "Much@s kirzheHappy",
+    "Nada kirzheCr",
+    "&#($! Error de computo, cantidad demasiado grande kirzheHappy",
+    "L@s podrás contar con los dedos de 1 mano kirzheCozy",
 ];
 
 respComo = [
-    "Muy bien",
-    "Muy mal",
-    "¡Pesimo!",
-    "¡Excelente!",
-    "Como tu siempre lo has deseado",
-    "Todo lo contrario a lo que piensas",
-    "Igual que en tus peores pesadillas",
-    "Mal, muy mal",
-    "Será lo mejor que te haya pasado jamas",
-    "Normal",
-    "Nada en especial",
-    "Simple",
-    "Como siempre",
-    "Creo que tu ya sabes la respuesta",
-    "Pues... más de lo mismo",
+    "Muy bien kirzheHappy",
+    "Muy mal kirzheCry",
+    "¡Pesimo! kirzheCry",
+    "¡Excelente! kirzheHappy",
+    "Como tu siempre lo has deseado kirzheHappy",
+    "Todo lo contrario a lo que piensas kirzhePayaso",
+    "Igual que en tus peores pesadillas kirzheCry",
+    "Mal, muy mal kirzheCry",
+    "Será lo mejor que te haya pasado jamas kirzheHappy",
+    "Normal kirzheFrappe",
+    "Nada en especial kirzheFrappe",
+    "Simple kirzhePayaso",
+    "Como siempre kirzheFrappe",
+    "Creo que tu ya sabes la respuesta kirzhePayaso",
+    "Pues... más de lo mismo kirzhePayaso",
 ];
 
 respGlobal = [
-    "Creeme, hay cosas que no quieres saber...",
-    "¿Esa pregunta es enserio?",
-    "¡No me hagas reir!",
-    "Ni si quiera me molestaré en responder eso",
-    "No mereces una respuesta, lo siento",
-    "Esta respuesta podría herirte, asi que no lo diré",
-    "Decirte la respuesta sería darte un spoiler, y no soy esa clase de bot",
-    "¿Piesas que un bot podría responder a algo asi?",
-    "¿Tantas ganas tienes de llorar?",
+    "Creeme, hay cosas que no quieres saber... kirzheCozy",
+    "¿Esa pregunta es enserio? kirzhePayaso",
+    "¡No me hagas reir! kirzhePayaso",
+    "Ni si quiera me molestaré en responder eso kirzheCozy",
+    "No mereces una respuesta, lo siento kirzheEnojada",
+    "Esta respuesta podría herirte, asi que no lo diré kirzheCozy",
+    "Decirte la respuesta sería darte un spoiler, y no soy esa clase de bot kirzheEnojada",
+    "¿Piesas que un bot podría responder a algo asi? kirzhePayaso",
+    "¿Tantas ganas tienes de llorar? kirzhePayaso",
+    "Sigue participando kirzheCozy",
 ];
 
 respError = [
-    "Pregunta de nuevo...",
-    "Prueba preguntandode nuevo",
-    "Porfavor, repite tu pregunta",
-    "Intenta preguntando de otra manera",
-    "No creo haber entendido tu pregunta",
-    "Concéntrate y vuelve a preguntar",
+    "Pregunta de nuevo... kirzheTeemo",
+    "Prueba preguntandode nuevo kirzheTeemo",
+    "Porfavor, repite tu pregunta kirzheTeemo",
+    "Intenta preguntando de otra manera kirzheFrappe",
+    "No creo haber entendido tu pregunta kirzheTeemo",
+    "Concéntrate y vuelve a preguntar kirzheFrappe",
 ];
 
 (function () {
-    if (inputUsuario.match(/^(que haces|que comes|que cuentas|como te llamas|eres mujer|eres hombre|cuantos años tienes)/gi)) {
-        return "Que te importa Kappa";
+    if (inputUsuario.match(/^(que haces|que comes|que cuentas|c.mo te llamas|eres mujer|eres hombre|cu.ntos años tienes)/gi)) {
+        return "Que te importa kirzheEnojada";
     }
     if (Math.floor(Math.random() * 100) < 7) {
         return respGlobal[Math.floor(Math.random() * respGlobal.length - 1)];
     }
-    if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|podrias|podrías|dirias|podrias decirme si|como me ira|.*?re|.*?ré)/gi)) {
+    if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|podr.as|dir.as|podr.as decirme si|c.mo me ir.|.*?re|.*?ré)/gi)) {
         return respSiNo[Math.floor(Math.random() * respSiNo.length - 1)];
     }
-    if (inputUsuario.match(/^(cuantos|con cuantos|cuantas|con cuantas)/gi)) {
-        unidad = inputUsuario.split(' ')[1] === 'cuantos' ? inputUsuario.split(' ')[2] : inputUsuario.split(' ')[1];
-        return `${Math.floor(Math.random() * 50)} ${unidad}`;
+    if (inputUsuario.match(/^(cu.ntos|con cu.ntos|cu.ntas|con cu.ntas)/gi)) {
+        unidad = inputUsuario.split(' ')[1].match(/^(cu.ntos)/gi) ? inputUsuario.split(' ')[2] : inputUsuario.split(' ')[1];
+        return `${Math.floor(Math.random() * 50)} ${unidad} kirzheFrappe`;
     }
-    if (inputUsuario.match(/^(cuando|cuanto tiempo|en cuanto tiempo|cuantos dias|con cuantos dias|en que tiempo)/gi)) {
-        tiempo = ["dias", "meses", "años", "horas", "minutos"];
-        return `en ${Math.floor(Math.random() * 100)} ${tiempo[Math.floor(Math.random() * tiempo.length - 1)]}`;
+    if (inputUsuario.match(/^(cu.ndo|cu.nto tiempo|en cu.nto tiempo|cu.ntos d.as|con cu.ntos d.as|en que tiempo)/gi)) {
+        tiempo = ["días", "meses", "años", "horas", "minutos"];
+        return `en ${Math.floor(Math.random() * 100)} ${tiempo[Math.floor(Math.random() * tiempo.length - 1)]} kirzheFrappe`;
     }
-    if (inputUsuario.match(/^(en cuanto esta)/gi)) {
-        return `en ${Math.floor(Math.random() * 100000)}`;
+    if (inputUsuario.match(/^(en cu.nto esta)/gi)) {
+        return `en ${Math.floor(Math.random() * 100000)} kirzheFrappe`;
     }
-    if (inputUsuario.match(/^(dame un numero|dime un numero|que numero)/gi)) {
-        return `${Math.floor(Math.random() * 100)}`;
+    if (inputUsuario.match(/^(dame un n.mero|dime un n.mero|que n.mero|n.mero del \d+ al \d+|dame un n.mero del \d+ al \d+)/gi)) {
+        return `${Math.floor(Math.random() * 100)} kirzheHi`;
     }
-    if (inputUsuario.match(/^(cuanto|cuantos|que cantidad|cuantas|cuanta|en que cantidad|que tanto)/gi)) {
+    if (inputUsuario.match(/^(cu.nto|cu.ntos|que cantidad|cu.ntas|cuanta|en que cantidad|que tanto)/gi)) {
         return respCuanto[Math.floor(Math.random() * respCuanto.length - 1)];
     }
-    if (inputUsuario.match(/^(como me .*?a|como .*?re|como .*?a|como se encuentra|como se encontrar|como estas|como te va)/gi)) {
+    if (inputUsuario.match(/^(c.mo me .*?a|c.mo .*?re|c.mo .*?a|c.mo se encuentra|c.mo se encontrar.|c.mo est.s|c.mo te va)/gi)) {
         return respComo[Math.floor(Math.random() * respComo.length - 1)];
     }
     return respError[Math.floor(Math.random() * respError.length - 1)];
