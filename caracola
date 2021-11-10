@@ -39,10 +39,10 @@ respComo = [
     "Igual que en tus peores pesadillas kirzheCry",
     "Mal, muy mal kirzheCry",
     "Será lo mejor que te haya pasado jamas kirzheHappy",
-    "Normal kirzheFrappe",
-    "Nada en especial kirzheFrappe",
+    "Normal kirzheTeemo",
+    "Nada en especial kirzheTeemo",
     "Simple kirzhePayaso",
-    "Como siempre kirzheFrappe",
+    "Como siempre kirzheTeemo",
     "Creo que tu ya sabes la respuesta kirzhePayaso",
     "Pues... más de lo mismo kirzhePayaso",
 ];
@@ -64,13 +64,13 @@ respError = [
     "Pregunta de nuevo... kirzheTeemo",
     "Prueba preguntandode nuevo kirzheTeemo",
     "Porfavor, repite tu pregunta kirzheTeemo",
-    "Intenta preguntando de otra manera kirzheFrappe",
+    "Intenta preguntando de otra manera kirzheTeemo",
     "No creo haber entendido tu pregunta kirzheTeemo",
-    "Concéntrate y vuelve a preguntar kirzheFrappe",
+    "Concéntrate y vuelve a preguntar kirzheTeemo",
 ];
 
 (function () {
-    if (inputUsuario.match(/^(que haces|que comes|que cuentas|c.mo te llamas|eres mujer|eres hombre|cu.ntos años tienes)/gi)) {
+    if (inputUsuario.match(/^(que haces|que comes|que cuentas|c.mo te llamas|eres mujer|eres hombre|cu.ntos años tienes|c.mo est.s|c.mo te va)/gi)) {
         return "Que te importa kirzheEnojada";
     }
     if (Math.floor(Math.random() * 100) < 7) {
@@ -81,14 +81,14 @@ respError = [
     }
     if (inputUsuario.match(/^(cu.ntos|con cu.ntos|cu.ntas|con cu.ntas)/gi)) {
         unidad = inputUsuario.split(' ')[1].match(/^(cu.ntos)/gi) ? inputUsuario.split(' ')[2] : inputUsuario.split(' ')[1];
-        return `${Math.floor(Math.random() * 50)} ${unidad} kirzheFrappe`;
+        return `${Math.floor(Math.random() * 50)} ${unidad} kirzheTeemo`;
     }
     if (inputUsuario.match(/^(cu.ndo|cu.nto tiempo|en cu.nto tiempo|cu.ntos d.as|con cu.ntos d.as|en que tiempo)/gi)) {
         tiempo = ["días", "meses", "años", "horas", "minutos"];
-        return `en ${Math.floor(Math.random() * 100)} ${tiempo[Math.floor(Math.random() * tiempo.length - 1)]} kirzheFrappe`;
+        return `en ${Math.floor(Math.random() * 100)} ${tiempo[Math.floor(Math.random() * tiempo.length - 1)]} kirzheTeemo`;
     }
     if (inputUsuario.match(/^(en cu.nto esta)/gi)) {
-        return `en ${Math.floor(Math.random() * 100000)} kirzheFrappe`;
+        return `en ${Math.floor(Math.random() * 100000)} kirzheTeemo`;
     }
     if (inputUsuario.match(/^(dame un n.mero|dime un n.mero|que n.mero|n.mero del \d+ al \d+|dame un n.mero del \d+ al \d+)/gi)) {
         return `${Math.floor(Math.random() * 100)} kirzheHi`;
@@ -96,7 +96,7 @@ respError = [
     if (inputUsuario.match(/^(cu.nto|cu.ntos|que cantidad|cu.ntas|cuanta|en que cantidad|que tanto)/gi)) {
         return respCuanto[Math.floor(Math.random() * respCuanto.length - 1)];
     }
-    if (inputUsuario.match(/^(c.mo me .*?a|c.mo .*?re|c.mo .*?a|c.mo se encuentra|c.mo se encontrar.|c.mo est.s|c.mo te va)/gi)) {
+    if (inputUsuario.match(/^(c.mo me .*?a|c.mo .*?re|c.mo .*?a|c.mo se encuentra|c.mo se encontrar.)/gi)) {
         return respComo[Math.floor(Math.random() * respComo.length - 1)];
     }
     return respError[Math.floor(Math.random() * respError.length - 1)];
