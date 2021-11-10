@@ -1,4 +1,4 @@
-const respSiNo = [
+respSiNo = [
     "Si",
     "No",
     "Probablemente",
@@ -15,7 +15,7 @@ const respSiNo = [
     "Tengo un buen presentimiento",
 ];
 
-const respCuanto = [
+respCuanto = [
     "Humm... diria que entre 5 y 10",
     "Muy poc@s",
     "Casi nada",
@@ -30,7 +30,7 @@ const respCuanto = [
     "L@s podrás contar con los dedos de 1 mano",
 ];
 
-const respComo = [
+respComo = [
     "Muy bien",
     "Muy mal",
     "¡Pesimo!",
@@ -48,7 +48,7 @@ const respComo = [
     "Pues... más de lo mismo",
 ];
 
-const respGlobal = [
+respGlobal = [
     "Creeme, hay cosas que no quieres saber...",
     "¿Esa pregunta es enserio?",
     "¡No me hagas reir!",
@@ -60,7 +60,7 @@ const respGlobal = [
     "¿Tantas ganas tienes de llorar?",
 ];
 
-const respError = [
+respError = [
     "Pregunta de nuevo...",
     "Prueba preguntandode nuevo",
     "Porfavor, repite tu pregunta",
