@@ -91,8 +91,11 @@ respError = [
     if (inputUsuario.match(/^(cuanto|cuantos|que cantidad|cuantas|cuanta|en que cantidad|que tanto)/)) {
         return respCuanto[Math.floor(Math.random() * respCuanto.length - 1)];
     }
-    if (inputUsuario.match(/^(como me .*?a|como .*?re|como .*?a|como se encuentra|como se encontrar)/)) {
+    if (inputUsuario.match(/^(como me .*?a|como .*?re|como .*?a|como se encuentra|como se encontrar|como estas|como te va)/)) {
         return respComo[Math.floor(Math.random() * respComo.length - 1)];
+    }
+    if (inputUsuario.match(/^(que haces|que comes|que cuentas)/)) {
+        return "Que te importa Kappa";
     }
     return respError[Math.floor(Math.random() * respError.length - 1)];
 }());
