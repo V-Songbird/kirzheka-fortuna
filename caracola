@@ -1,0 +1,98 @@
+const respSiNo = [
+    "Si",
+    "No",
+    "Probablemente",
+    "Quizá",
+    "Algún día",
+    "Sigue participando",
+    "No lo creo",
+    "¿De verdad crees tener la oportunidad?",
+    "¡Por supuesto que si!",
+    "En un par de años",
+    "Asi es, te lo has ganado",
+    "Humm... creo que si...",
+    "Eso espero, aun que deberás tener cuidado...",
+    "Tengo un buen presentimiento",
+];
+
+const respCuanto = [
+    "Humm... diria que entre 5 y 10",
+    "Muy poc@s",
+    "Casi nada",
+    "Demasiad@s",
+    "Más de lo que esperabas",
+    "Menos de lo que esperabas",
+    "Una cantidad muy pequeña, casi inexistente",
+    "Una cantidad muy grande, no podría mostrartelo en números",
+    "Much@",
+    "Nada",
+    "&#($! Error de computo, cantidad demasiado grande",
+    "L@s podrás contar con los dedos de 1 mano",
+];
+
+const respComo = [
+    "Muy bien",
+    "Muy mal",
+    "¡Pesimo!",
+    "¡Excelente!",
+    "Como tu siempre lo has deseado",
+    "Todo lo contrario a lo que piensas",
+    "Igual que en tus peores pesadillas",
+    "Mal, muy mal",
+    "Será lo mejor que te haya pasado jamas",
+    "Normal",
+    "Nada en especial",
+    "Simple",
+    "Como siempre",
+    "Creo que tu ya sabes la respuesta",
+    "Pues... más de lo mismo",
+];
+
+const respGlobal = [
+    "Creeme, hay cosas que no quieres saber...",
+    "¿Esa pregunta es enserio?",
+    "¡No me hagas reir!",
+    "Ni si quiera me molestaré en responder eso",
+    "No mereces una respuesta, lo siento",
+    "Esta respuesta podría herirte, asi que no lo diré",
+    "Decirte la respuesta sería darte un spoiler, y no soy esa clase de bot",
+    "¿Piesas que un bot podría responder a algo asi?",
+    "¿Tantas ganas tienes de llorar?",
+];
+
+const respError = [
+    "Pregunta de nuevo...",
+    "Prueba preguntandode nuevo",
+    "Porfavor, repite tu pregunta",
+    "Intenta preguntando de otra manera",
+    "No creo haber entendido tu pregunta",
+    "Concéntrate y vuelve a preguntar",
+];
+
+(function () {
+    if (Math.floor(Math.random() * 100) < 7) {
+        return respGlobal[Math.floor(Math.random() * respGlobal.length - 1)];
+    }
+    if (inputUsuario.match(/^(me va|crees|piensas|podrias|podrías|dirias|podrias decirme si|como me ira|.*?re|.*?ré)/)) {
+        return respSiNo[Math.floor(Math.random() * respSiNo.length - 1)];
+    }
+    if (inputUsuario.match(/^(cuantos años|con cuantos años)/)) {
+        return `${Math.floor(Math.random() * 50)} años`;
+    }
+    if (inputUsuario.match(/^(cuanto tiempo|en cuanto tiempo|cuantos dias|con cuantos dias|en que tiempo)/)) {
+        return `${Math.floor(Math.random() * 100)} dias`;
+    }
+    if (inputUsuario.match(/^(en cuanto esta)/)) {
+        return `en ${Math.floor(Math.random() * 100000)}`;
+    }
+    if (inputUsuario.match(/^(dame un numero|dime un numero|que numero)/)) {
+        return `${Math.floor(Math.random() * 100)}`;
+    }
+    if (inputUsuario.match(/^(cuanto|cuantos|que cantidad|cuantas|cuanta|en que cantidad|que tanto)/)) {
+        return respCuanto[Math.floor(Math.random() * respCuanto.length - 1)];
+    }
+    if (inputUsuario.match(/^(como me .*?a|como .*?re|como .*?a|como se encuentra|como se encontrar)/)) {
+        return respComo[Math.floor(Math.random() * respComo.length - 1)];
+    }
+    return respError[Math.floor(Math.random() * respError.length - 1)];
+}());
