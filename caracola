@@ -70,17 +70,22 @@ respError = [
 ];
 
 (function () {
+    if (inputUsuario.match(/^(que haces|que comes|que cuentas|como te llamas|eres mujer|eres hombre|cuantos años tienes)/gi)) {
+        return "Que te importa Kappa";
+    }
     if (Math.floor(Math.random() * 100) < 7) {
         return respGlobal[Math.floor(Math.random() * respGlobal.length - 1)];
     }
     if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|podrias|podrías|dirias|podrias decirme si|como me ira|.*?re|.*?ré)/gi)) {
         return respSiNo[Math.floor(Math.random() * respSiNo.length - 1)];
     }
-    if (inputUsuario.match(/^(cuantos años|con cuantos años)/gi)) {
-        return `${Math.floor(Math.random() * 50)} años`;
+    if (inputUsuario.match(/^(cuantos|con cuantos)/gi)) {
+        unidad = inputUsuario.split(' ')[1] === 'cuantos' ? inputUsuario.split(' ')[2] : inputUsuario.split(' ')[1];
+        return `${Math.floor(Math.random() * 50)} ${unidad}`;
     }
-    if (inputUsuario.match(/^(cuanto tiempo|en cuanto tiempo|cuantos dias|con cuantos dias|en que tiempo)/gi)) {
-        return `${Math.floor(Math.random() * 100)} dias`;
+    if (inputUsuario.match(/^(cuando|cuanto tiempo|en cuanto tiempo|cuantos dias|con cuantos dias|en que tiempo)/gi)) {
+        tiempo = ["dias", "meses", "años", "horas", "minutos"];
+        return `en ${Math.floor(Math.random() * 100)} ${tiempo[Math.floor(Math.random() * tiempo.length - 1)]}`;
     }
     if (inputUsuario.match(/^(en cuanto esta)/gi)) {
         return `en ${Math.floor(Math.random() * 100000)}`;
@@ -93,9 +98,6 @@ respError = [
     }
     if (inputUsuario.match(/^(como me .*?a|como .*?re|como .*?a|como se encuentra|como se encontrar|como estas|como te va)/gi)) {
         return respComo[Math.floor(Math.random() * respComo.length - 1)];
-    }
-    if (inputUsuario.match(/^(que haces|que comes|que cuentas|como te llamas|eres mujer|eres hombre)/gi)) {
-        return "Que te importa Kappa";
     }
     return respError[Math.floor(Math.random() * respError.length - 1)];
 }());
