@@ -24,7 +24,7 @@ respCuanto = [
     "Menos de lo que esperabas",
     "Una cantidad muy pequeña, casi inexistente",
     "Una cantidad muy grande, no podría mostrartelo en números",
-    "Much@",
+    "Much@s",
     "Nada",
     "&#($! Error de computo, cantidad demasiado grande",
     "L@s podrás contar con los dedos de 1 mano",
@@ -94,7 +94,7 @@ respError = [
     if (inputUsuario.match(/^(como me .*?a|como .*?re|como .*?a|como se encuentra|como se encontrar|como estas|como te va)/gi)) {
         return respComo[Math.floor(Math.random() * respComo.length - 1)];
     }
-    if (inputUsuario.match(/^(que haces|que comes|que cuentas)/gi)) {
+    if (inputUsuario.match(/^(que haces|que comes|que cuentas|como te llamas|eres mujer|eres hombre)/gi)) {
         return "Que te importa Kappa";
     }
     return respError[Math.floor(Math.random() * respError.length - 1)];
