@@ -79,7 +79,7 @@ respError = [
     if (Math.floor(Math.random() * 100) < 7) {
         return respGlobal[Math.floor(Math.random() * respGlobal.length - 1)];
     }
-    if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|podr.as|dir.as|podr.as decirme si|c.mo me ir.|.*?re|.*?ré|.*?ria)/gi)) {
+    if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|podr.as|dir.as|podr.as decirme si|c.mo me ir.|.*?re|.*?ré|.*?ria|.*ría)/gi)) {
         return respSiNo[Math.floor(Math.random() * respSiNo.length - 1)];
     }
     if (inputUsuario.match(/^(cu.ntos|con cu.ntos|cu.ntas|con cu.ntas)/gi)) {
