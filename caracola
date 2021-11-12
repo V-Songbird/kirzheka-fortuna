@@ -84,7 +84,7 @@ respError = [
     "Concéntrate y vuelve a preguntar kirzheTeemo",
 ];
 
-function a () {
+(function () {
     // Validar ¿
     if (inputUsuario[0] === "¿") {
         inputUsuario = inputUsuario.substring(1);
@@ -187,7 +187,4 @@ function a () {
         return respComo[Math.floor(Math.random() * respComo.length - 1)];
     }
     return respError[Math.floor(Math.random() * respError.length - 1)];
-};
-
-inputUsuario = "@T_Songbird lograra enseñarte a ser inteligente?"
-console.log(a())
+}());
