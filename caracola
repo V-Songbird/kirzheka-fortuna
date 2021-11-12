@@ -105,7 +105,7 @@ respError = [
     if (inputUsuario.match(/^(que haces|que comes|que cuentas|(como|cómo) te llamas|eres mujer|eres hombre|(cuantos|cuántos) años tienes|(como|cómo) est.s|(como|cómo) te va|te gusta|te (gustaría|gustaria))(\?? ?)/gi)) {
         return "Que te importa kirzheEnojada";
     }
-    if (inputUsuario.match(/^(que te parece|que piensas|que piensas de|que opinas de|que opinas|dirias que|afirmas que)(\?? ?)/gi)) {
+    if (inputUsuario.match(/^(que te parece|que piensas|que piensas de|que opinas de|que opinas|dirias que|afirmas que|(estas|estás) deacuerdo|(estas|estás) de acuerdo|(estas|estás))(\?? ?)/gi)) {
         return "Mejor me reservo el derecho a dar opiniones personales kirzheCozy";
     }
 
