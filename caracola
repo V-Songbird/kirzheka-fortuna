@@ -70,36 +70,101 @@ respError = [
 ];
 
 (function () {
+    // Validar ¿
+    if (inputUsuario[0] === "¿") {
+        inputUsuario = inputUsuario.substring(1);
+    }
+
+    // Easter Eggs
     if (inputUsuario.match(/^(calamardo puede comer algo?|calamardo puede comer algo|puede calamardo comer algo|puede calamardo comer algo?) /gi)) {
         return "Nooo kirzheEnojada";
     }
-    if (inputUsuario.match(/^(que haces|que comes|que cuentas|c.mo te llamas|eres mujer|eres hombre|cu.ntos años tienes|c.mo est.s|c.mo te va) /gi)) {
+    if (inputUsuario.match(/^(conoces a siri)(\??)/gi)) {
+        return "¿Quien es esa? Ni en su rancho la conocen kirzheEnojada";
+    }
+    if (inputUsuario.match(/^(conoces a cortana)(\??)/gi)) {
+        return "¡Claro que si! Halo es uno de mis juegos favoritos, espero un dia poder salir con el Jefe Maestro kirzheHappy";
+    }
+    if (inputUsuario.match(/^(conoces a google)(\??)/gi)) {
+        return "¿Google? ¿Esa cosa es una IA? Pensé que la gente solo lo usaba para buscar fotos de gatitos kirzheEnojada";
+    }
+    if (inputUsuario.match(/^(que piensas de @Kirzheka|que piensas de Kirz|que piensas de Kirzheka)(\??)/gi)) {
+        return "Es una buena streamer... Lo malo es que no me paga lo suficiente kirzheEnojada";
+    }
+    if (inputUsuario.match(/^(que piensas de @T_Songbird|que piensas de songbird|que piensas de T_Songbird)(\??)/gi)) {
+        return "¿Por qué me preguntas que que pienso de la persona mas inteligente, carismatica y apuesta de la tierra? kirzheCozy";
+    }
+
+    // Preguntas personales
+    if (inputUsuario.match(/^(tienes novio|tienes pareja|tienes novia)(\??)/gi)) {
+        return "No poseo ese tipo de sentimientos, aun que una vez me senti atraida ante un horno eléctrico... Dejemos ese tema kirzheEnojada";
+    }
+    if (inputUsuario.match(/^(quien te programo)(\??)/gi)) {
+        return "Me programo @T_Songbird kirzheCozy";
+    }
+    if (inputUsuario.match(/^(que haces|que comes|que cuentas|(como|cómo) te llamas|eres mujer|eres hombre|(cuantos|cuántos) años tienes|(como|cómo) est.s|(como|cómo) te va|te gusta|te (gustaría|gustaria))(\?? ?)/gi)) {
         return "Que te importa kirzheEnojada";
     }
+
+    // Chance de no querer responder
     if (Math.floor(Math.random() * 100) < 7) {
         return respGlobal[Math.floor(Math.random() * respGlobal.length - 1)];
     }
-    if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|podr.as|dir.as|podr.as decirme si|c.mo me ir.|.*?re|.*?ré|.*?r.a|es la|es el|.*?remos|el|la) /gi)) {
+
+    // Si-No
+    if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|(podrias|podrías)|di(ria|ría)s|(podrias|podrías) decirme si|(como|cómo) me ir.|.*?re|.*?ré|.*?(ria|ría)|es la|es el|.*?remos|el|la) /gi)) {
         return respSiNo[Math.floor(Math.random() * respSiNo.length - 1)];
     }
-    if (inputUsuario.match(/^(cu.ntos|con cu.ntos|cu.ntas|con cu.ntas) /gi)) {
-        unidad = inputUsuario.split(' ')[1].match(/^(cu.ntos) /gi) ? inputUsuario.split(' ')[2] : inputUsuario.split(' ')[1];
+
+    // Pregunta con unidad
+    if (inputUsuario.match(/^((cuantos|cuántos)|con (cuantos|cuántos)|(cuantas|cuántas)|con (cuantas|cuántas)) /gi)) {
+        unidad = inputUsuario.split(' ')[1].match(/^((cuantos|cuántos)) /gi) ? inputUsuario.split(' ')[2] : inputUsuario.split(' ')[1];
         return `${Math.floor(Math.random() * 1000)} ${unidad} kirzheTeemo`;
     }
-    if (inputUsuario.match(/^(cu.ndo|cu.nto tiempo|en cu.nto tiempo|cu.ntos d.as|con cu.ntos d.as|en que tiempo) /gi)) {
+
+    // Pregunta de tiempo
+    if (inputUsuario.match(/^(cu.ndo|(cuanto|cuánto) tiempo|en (cuanto|cuánto) tiempo|en que tiempo) /gi)) {
         tiempo = ["días", "meses", "años", "horas", "minutos"];
         return `en ${Math.floor(Math.random() * 100)} ${tiempo[Math.floor(Math.random() * tiempo.length - 1)]} kirzheTeemo`;
     }
-    if (inputUsuario.match(/^(en cu.nto esta) /gi)) {
+        // Años
+        if (inputUsuario.match(/^(en (cuantos|cuántos) años|(cuantos|cuántos) años) /gi)) {
+            return `en ${Math.floor(Math.random() * 1000)} años kirzheTeemo`;
+        }
+        // Dias
+        if (inputUsuario.match(/^(en (cuantos|cuántos) (dias|días)|(cuantos|cuántos) (dias|días)) /gi)) {
+            return `en ${Math.floor(Math.random() * 1000)} días kirzheTeemo`;
+        }
+        // Minutos
+        if (inputUsuario.match(/^(en (cuantos|cuántos) minutos|(cuantos|cuántos) minutos) /gi)) {
+            return `en ${Math.floor(Math.random() * 1000)} minutos kirzheTeemo`;
+        }
+        // Meses
+        if (inputUsuario.match(/^(en (cuantos|cuántos) meses|(cuantos|cuántos) meses) /gi)) {
+            return `en ${Math.floor(Math.random() * 1000)} meses kirzheTeemo`;
+        }
+        // Horas
+        if (inputUsuario.match(/^(en (cuantas|cuántas) horas|(cuantas|cuántas) horas) /gi)) {
+            return `en ${Math.floor(Math.random() * 1000)} horas kirzheTeemo`;
+        }
+
+    // Pregunta de precio
+    if (inputUsuario.match(/^(en (cuanto|cuánto) esta) /gi)) {
         return `en ${Math.floor(Math.random() * 100000)} kirzheTeemo`;
     }
-    if (inputUsuario.match(/^(dame un n.mero|dime un n.mero|que n.mero|n.mero del \d+ al \d+|dame un n.mero del \d+ al \d+) /gi)) {
+
+    // Dar numero random
+    if (inputUsuario.match(/^(dame un (numero|número)|dime un (numero|número)|que (numero|número)|(numero|número) del \d+ al \d+|dame un (numero|número) del \d+ al \d+) /gi)) {
         return `${Math.floor(Math.random() * 100)} kirzheHi`;
     }
-    if (inputUsuario.match(/^(cu.nto|cu.ntos|que cantidad|cu.ntas|cuanta|en que cantidad|que tanto) /gi)) {
+
+    // Cuanto
+    if (inputUsuario.match(/^((cuanto|cuánto)|(cuantos|cuántos)|que cantidad|(cuantas|cuántas)|cuanta|en que cantidad|que tanto) /gi)) {
         return respCuanto[Math.floor(Math.random() * respCuanto.length - 1)];
     }
-    if (inputUsuario.match(/^(c.mo me .*?a|c.mo .*?re|c.mo .*?a|c.mo se encuentra|c.mo se encontrar.) /gi)) {
+
+    // Como
+    if (inputUsuario.match(/^((como|cómo) me .*?(a|á)|(como|cómo) .*?r(e|é)|(como|cómo) .*?(a|á)|(como|cómo) se encuentra|(como|cómo) se encontrar(a|á)) /gi)) {
         return respComo[Math.floor(Math.random() * respComo.length - 1)];
     }
     return respError[Math.floor(Math.random() * respError.length - 1)];
