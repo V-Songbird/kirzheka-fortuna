@@ -13,6 +13,21 @@ respSiNo = [
     "Eso espero, aun que deberás tener cuidado... kirzheAyno",
     "Tengo un buen presentimiento kirzheHappy",
 ];
+respSiNoOtro = [
+    "Si kirzheHype2",
+    "No kirzheCry",
+    "Probablemente kirzheCerdito",
+    "Quizá kirzheEnojada",
+    "Algún día kirzheHappy",
+    "No lo creo kirzheCry",
+    "¿De verdad cree tener la oportunidad? kirzhePayaso",
+    "¡Por supuesto que si! kirzheHype2",
+    "En un par de años kirzheCerdito",
+    "Asi es, se lo ha ganado kirzheHappy",
+    "Humm... creo que si... kirzheCerdito",
+    "Eso espero, aun que deberías tener cuidado... kirzheAyno",
+    "Tengo un buen presentimiento kirzheHappy",
+];
 
 respCuanto = [
     "Humm... diria que entre 5 y 10 kirzheCozy",
@@ -69,7 +84,7 @@ respError = [
     "Concéntrate y vuelve a preguntar kirzheTeemo",
 ];
 
-(function () {
+function a () {
     // Validar ¿
     if (inputUsuario[0] === "¿") {
         inputUsuario = inputUsuario.substring(1);
@@ -116,6 +131,7 @@ respError = [
 
     // Si-No
     if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|(podrias|podrías)|di(ria|ría)s|(podrias|podrías) decirme si|(como|cómo) me ir.|.*?re|.*?ré|.*?(ria|ría)|es la|es el|.*?remos|el|la) /gi)) {
+        if (inputUsuario[0] === "@") return respSiNoOtro[Math.floor(Math.random() * respSiNoOtro.length - 1)];
         return respSiNo[Math.floor(Math.random() * respSiNo.length - 1)];
     }
 
@@ -171,4 +187,7 @@ respError = [
         return respComo[Math.floor(Math.random() * respComo.length - 1)];
     }
     return respError[Math.floor(Math.random() * respError.length - 1)];
-}());
+};
+
+inputUsuario = "@T_Songbird lograra enseñarte a ser inteligente?"
+console.log(a())
