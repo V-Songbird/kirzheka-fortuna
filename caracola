@@ -86,12 +86,12 @@ respError = [
 
 (function () {
     // Validar ¿
-    if (inputUsuario[0] === "¿") {
-        inputUsuario = inputUsuario.substring(1);
-    }
+    // if (inputUsuario[0] === "¿") {
+    //     inputUsuario = inputUsuario.substring(1);
+    // }
 
     // Easter Eggs
-    if (inputUsuario.match(/^(calamardo puede comer algo?|calamardo puede comer algo|puede calamardo comer algo|puede calamardo comer algo?) /gi)) {
+    if (inputUsuario.match(/^(calamardo puede comer algo?|calamardo puede comer algo|puede calamardo comer algo|puede calamardo comer algo?)/gi)) {
         return "Nooo kirzheEnojada";
     }
     if (inputUsuario.match(/^(conoces a siri)(\??)/gi)) {
@@ -130,19 +130,19 @@ respError = [
     }
 
     // Si-No
-    if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|(podrias|podrías)|di(ria|ría)s|(podrias|podrías) decirme si|(como|cómo) me ir.|.*?re|.*?ré|.*?(ria|ría)|es la|es el|.*?remos|el|la) /gi)) {
+    if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|(podrias|podrías)|di(ria|ría)s|(podrias|podrías) decirme si|(como|cómo) me ir(a|á)|.*?r(e|é)|.*?(ria|ría)|es la|es el|.*?remos|el|la) /gi)) {
         if (inputUsuario[0] === "@") return respSiNoOtro[Math.floor(Math.random() * respSiNoOtro.length - 1)];
         return respSiNo[Math.floor(Math.random() * respSiNo.length - 1)];
     }
 
     // Pregunta con unidad
     if (inputUsuario.match(/^((cuantos|cuántos)|con (cuantos|cuántos)|(cuantas|cuántas)|con (cuantas|cuántas)) /gi)) {
-        unidad = inputUsuario.split(' ')[1].match(/^((cuantos|cuántos)) /gi) ? inputUsuario.split(' ')[2] : inputUsuario.split(' ')[1];
+        unidad = inputUsuario.split(' ')[1].match(/^(cuantos|cuántos|cuantas|cuántas)/gi) ? inputUsuario.split(' ')[2] : inputUsuario.split(' ')[1];
         return `${Math.floor(Math.random() * 1000)} ${unidad} kirzheTeemo`;
     }
 
     // Pregunta de tiempo
-    if (inputUsuario.match(/^(cu.ndo|(cuanto|cuánto) tiempo|en (cuanto|cuánto) tiempo|en que tiempo) /gi)) {
+    if (inputUsuario.match(/^((cuándo|cuando)|(cuanto|cuánto) tiempo|en (cuanto|cuánto) tiempo|en que tiempo) /gi)) {
         tiempo = ["días", "meses", "años", "horas", "minutos"];
         return `en ${Math.floor(Math.random() * 100)} ${tiempo[Math.floor(Math.random() * tiempo.length - 1)]} kirzheTeemo`;
     }
