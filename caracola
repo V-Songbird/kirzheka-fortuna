@@ -79,12 +79,12 @@ respError = [
     if (Math.floor(Math.random() * 100) < 7) {
         return respGlobal[Math.floor(Math.random() * respGlobal.length - 1)];
     }
-    if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|podr.as|dir.as|podr.as decirme si|c.mo me ir.|.*?re|.*?ré|.*?ria|.*ría|es la|es el)/gi)) {
+    if (inputUsuario[0] === "@" || inputUsuario.match(/^(me va|me veo|estoy|crees|piensas|podr.as|dir.as|podr.as decirme si|c.mo me ir.|.*?re|.*?ré|.*?ria|.*?ría|es la|es el)/gi)) {
         return respSiNo[Math.floor(Math.random() * respSiNo.length - 1)];
     }
     if (inputUsuario.match(/^(cu.ntos|con cu.ntos|cu.ntas|con cu.ntas)/gi)) {
         unidad = inputUsuario.split(' ')[1].match(/^(cu.ntos)/gi) ? inputUsuario.split(' ')[2] : inputUsuario.split(' ')[1];
-        return `${Math.floor(Math.random() * 50)} ${unidad} kirzheTeemo`;
+        return `${Math.floor(Math.random() * 1000)} ${unidad} kirzheTeemo`;
     }
     if (inputUsuario.match(/^(cu.ndo|cu.nto tiempo|en cu.nto tiempo|cu.ntos d.as|con cu.ntos d.as|en que tiempo)/gi)) {
         tiempo = ["días", "meses", "años", "horas", "minutos"];
